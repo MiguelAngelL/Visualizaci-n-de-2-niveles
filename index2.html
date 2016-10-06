@@ -44,6 +44,7 @@
 			lines.description = 'flare';
 			var depart = new Object();
 			depart['name'] = temp[2];
+			depart['description'] = temp[2];
 			var departA = [];
 			var municA = [];
 			municA.push({'name':temp[4],'description': temp[4],'children':[{"name": temp[5], "size": temp[6]}]});
@@ -58,7 +59,8 @@
 					depart.children = municA;
 					departA.push(depart);
 					depart = new Object();
-					depart[headers[2]] = data[2];
+					depart['name'] = data[2];
+					depart['description'] = data[2];
 					municA = [];
 					munic['name'] = data[4];//municipio
 					munic['children'] = [{"name": data[5], "size": data[6]}];
